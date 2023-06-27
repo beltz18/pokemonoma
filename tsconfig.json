@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -23,6 +23,8 @@
       "@s/*": ["./sass/*"],
       "@c/*": ["./app/components/*"],
       "@p/*": ["./app/sections/*"],
+      "@r/*": ["./app/redux/*"],
+      "@h/*": ["./app/hooks/*"],
     },
     "plugins": [
       {

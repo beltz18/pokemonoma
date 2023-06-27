@@ -1,6 +1,16 @@
 import '@s/_index.min.scss'
-import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import type {
+  AppProps,
+} from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <title>Pokemonoma</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  )
 }
