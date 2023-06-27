@@ -1,0 +1,23 @@
+{
+  "name": "Pokemonoma",
+  "short_name": "Pokemonoma",
+  "description": "This is a PWA created as a technical test for Monoma Company",
+  "theme_color": "#0829bc",
+  "background_color": "#a4133c",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/logo-monoma.png",
+      "sizes": "449x83",
+      "type": "image/png"
+    },
+    {
+      "src": "/pokedex-icon.ico",
+      "sizes": "16x16 32x32 64x64 128x128 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}
