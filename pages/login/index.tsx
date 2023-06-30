@@ -1,8 +1,11 @@
-import React from 'react'
+import React         from 'react'
+import PokedexXYform from '@p/pokedexXYform'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <>
+      <PokedexXYform />
+    </>
   )
 }
 

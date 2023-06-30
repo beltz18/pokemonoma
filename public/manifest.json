@@ -20,6 +20,21 @@
       "type": "image/jpg"
     },
     {
+      "src": "assets/charmander.jpg",
+      "sizes": "8000x4500",
+      "type": "image/jpg"
+    },
+    {
+      "src": "assets/bulbasaur.png",
+      "sizes": "338x640",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/squirtle.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpg"
+    },
+    {
       "src": "assets/butterfree.gif",
       "sizes": "313x304",
       "type": "image/gif"
