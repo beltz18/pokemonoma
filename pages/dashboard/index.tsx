@@ -1,11 +1,12 @@
 import React  from 'react'
+import Dash   from '@p/dash'
 
-const Dash = () => {
+const Dashboard = () => {
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <>
+      <Dash />
+    </>
   )
 }
 
-export default Dash
+export default Dashboard
