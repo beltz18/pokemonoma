@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--firaCode);
+}
+
+body {
+  min-width: var(--100rw);
+  min-height: var(--100rh);
+}

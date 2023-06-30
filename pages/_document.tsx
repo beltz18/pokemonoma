@@ -4,8 +4,9 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="apple-touch-icon" href="/pokedex-icon.png" />
+        <link rel="manifest"   href="/manifest.json" />
+        <link rel="icon"       href="assets/pokedex-icon.ico" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
         <meta name="theme-color" content="#fff" />
       </Head>
       <body>

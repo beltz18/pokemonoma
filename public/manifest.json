@@ -10,12 +10,37 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/logo-monoma.png",
+      "src": "assets/logo-monoma.png",
       "sizes": "449x83",
       "type": "image/png"
     },
     {
-      "src": "/pokedex-icon.ico",
+      "src": "assets/forest.jpg",
+      "sizes": "900x582",
+      "type": "image/jpg"
+    },
+    {
+      "src": "assets/charmander.jpg",
+      "sizes": "8000x4500",
+      "type": "image/jpg"
+    },
+    {
+      "src": "assets/bulbasaur.png",
+      "sizes": "338x640",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/squirtle.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpg"
+    },
+    {
+      "src": "assets/butterfree.gif",
+      "sizes": "313x304",
+      "type": "image/gif"
+    },
+    {
+      "src": "assets/logo-monoma.png",
       "sizes": "16x16 32x32 64x64 128x128 256x256",
       "type": "image/x-icon"
     }
