@@ -21,7 +21,7 @@ const PokedexXYform = () => {
                 </div>
                 <div className='pass-t'>
                   <input type={`${!show ? "password" : "text"}`} id="password" placeholder="Password" />
-                  <i className={`bi ${!show ? "bi-eye-slash" : "bi-eye"}`} id="togglePassword" onClick={() => {setShow(!show); console.log(show)}}></i>
+                  <i className={`bi ${!show ? "bi-eye-slash" : "bi-eye"}`} id="togglePassword" onClick={() => {setShow(!show)}}></i>
                 </div>
                 <input type="submit" value="Login" />
               </div>
