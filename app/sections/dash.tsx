@@ -5,7 +5,7 @@ import Pokedex from '@c/pokedex'
 const Dash = () => {
   return (
     <>
-      <div style={{marginBottom: '5rem'}}>
+      <div className='dashi'>
         <Navbar />
         <Pokedex />
       </div>
