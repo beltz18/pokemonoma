@@ -20,9 +20,19 @@
       "type": "image/jpg"
     },
     {
+      "src": "assets/water.jpg",
+      "sizes": "736x917",
+      "type": "image/jpg"
+    },
+    {
       "src": "assets/charmander.jpg",
       "sizes": "8000x4500",
       "type": "image/jpg"
+    },
+    {
+      "src": "assets/evee-team.webp",
+      "sizes": "3840x2160",
+      "type": "image/webp"
     },
     {
       "src": "assets/bulbasaur.png",
@@ -40,8 +50,8 @@
       "type": "image/gif"
     },
     {
-      "src": "assets/logo-monoma.png",
-      "sizes": "16x16 32x32 64x64 128x128 256x256",
+      "src": "assets/pokedex-icon.ico",
+      "sizes": "16x16 32x32 64x64 128x128 256x256 512x512",
       "type": "image/x-icon"
     }
   ]
