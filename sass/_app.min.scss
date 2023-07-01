@@ -1,11 +1,1 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--raleway);
-}
-
-body {
-  min-width: var(--100rw);
-  min-height: var(--100rh);
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:var(--raleway)}body{min-width:var(--100rw);min-height:var(--100rh);overflow-x:hidden}body,html{scroll-behavior:smooth!important}html{scrollbar-width:thin;scrollbar-color:var(--dark-slate) var(--background-color)}::-moz-selection{color:#fff;background:var(--dark)}::selection{color:#fff;background:var(--dark)}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:var(--dark)}::-webkit-scrollbar-thumb{background-color:var(--light);border:3px solid var(--dark);border-radius:10px}
