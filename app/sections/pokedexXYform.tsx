@@ -1,4 +1,4 @@
-import React  from 'react'
+import React             from 'react'
 
 const PokedexXYform = () => {
   const [show, setShow] = React.useState(false)
@@ -13,14 +13,14 @@ const PokedexXYform = () => {
             <div className="login-box-top-circle"></div>
           </div>
           <div className="login-box-middle">
-            <form>
+            <form action='/dashboard' method='post'>
               <h1>Log In</h1>
               <div className="form">
                 <div>
-                  <input type="email"    id="email"    placeholder="Email"    />
+                  <input type="email" id="email" placeholder="Email" autoComplete='off' required />
                 </div>
                 <div className='pass-t'>
-                  <input type={`${!show ? "password" : "text"}`} id="password" placeholder="Password" />
+                  <input type={`${!show ? "password" : "text"}`} id="password" placeholder="Password" required />
                   <i className={`bi ${!show ? "bi-eye-slash" : "bi-eye"}`} id="togglePassword" onClick={() => {setShow(!show)}}></i>
                 </div>
                 <input type="submit" value="Login" />
