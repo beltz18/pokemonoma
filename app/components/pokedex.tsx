@@ -49,7 +49,7 @@ const Pokedex = () => {
                 <div className='poke-list'>
                 {
                   pokeList.map(({name}, index) => (
-                    <div>
+                    <div key={index}>
                       <div className="card-photo">
                         <Image
                           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${(index+1) + ((curPage - 1) * 10)}.png`}
@@ -72,8 +72,8 @@ const Pokedex = () => {
                 <div className="pagination">
                   <ul>
                     {
-                      pages.map((e) => (
-                        <li key={e} onClick={() => { setCurPage(e); getPokes((curPage - 1) * 10) }}>{e}</li>
+                      pages.map((e, index) => (
+                        <li key={index} onClick={() => { setCurPage(e); getPokes((curPage - 1) * 10) }}>{e}</li>
                       ))
                     }
                   </ul>

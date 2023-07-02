@@ -18,12 +18,12 @@ const Navbar = () => {
         </div>
         <div className="menu">
           <ul>
-            <li>
+            <li key='about'>
               <Link href='/'>
                 About
               </Link>
             </li>
-            <li>
+            <li key='profile'>
               Profile
             </li>
           </ul>
