@@ -50,6 +50,11 @@
       "type": "image/gif"
     },
     {
+      "src": "assets/pikachu-cute.gif",
+      "sizes": "220x110",
+      "type": "image/gif"
+    },
+    {
       "src": "assets/pokedex-icon.ico",
       "sizes": "16x16 32x32 64x64 128x128 256x256 512x512",
       "type": "image/x-icon"
