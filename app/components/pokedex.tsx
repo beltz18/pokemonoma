@@ -1,6 +1,50 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Image from 'next/image'
+import axios from 'axios'
 
 const Pokedex = () => {
+  const [pokeList, setPokeList] = useState([])
+  const [weight, setWeight]     = useState([])
+  const [moves, setMoves]       = useState([])
+  const [curPage, setCurPage]   = useState(1)
+  const pages = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+  const url = 'https://pokeapi.co/api/v2/'
+  const date = new Date()
+
+  async function getPokes(offset: number = 0) {
+    const data = await axios.get(url+`pokemon?offset=${offset}&limit=10`)
+    const list = data.data.results
+    setPokeList(list)
+    getWeights(offset)
+    // getMoves(offset)
+  }
+
+  async function getWeights(id:number = 1) {
+    let arr:any = []
+    for(let i = id + 1; i < id + 11; i++ ) {
+      let data   = await axios.get(url+`pokemon/${i}`)
+      let weight = data.data.weight
+      arr.push(weight)
+    }
+    setWeight(arr)
+  }
+
+  // not working
+  // async function getMoves(id:number = 1) {
+  //   let arr:any = []
+  //   for(let i = id + 1; i < id + 11; i++ ) {
+  //     let data   = await axios.get(url+`pokemon/${i}`)
+  //     let moves  = data.data.moves
+  //     arr.push([{
+  //       'a': moves[0].move.name,
+  //       'b': moves[1].move.name
+  //     }])
+  //   }
+  //   setMoves(arr)
+  // }
+
+  getPokes((curPage - 1) * 10)
+
   return (
     <>
       <div className="pokedex">
@@ -18,8 +62,41 @@ const Pokedex = () => {
           <div className="pokedex-right-content">
             <div className="card">
               <div className="card-main">
-                <div className="card-photo"></div>
-                <div className="card-description"></div>
+                <div className='poke-list'>
+                {
+                  pokeList.map(({name}, index) => (
+                    <div>
+                      <div className="card-photo">
+                        <Image
+                          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${(index+1) + ((curPage - 1) * 10)}.png`}
+                          alt={name}
+                          width='150'
+                          height='150'
+                        />
+                        <span className='index'><b>#{ (index+1) + ((curPage - 1) * 10) }</b></span>
+                        <span className="weight">
+                          { weight[index] } kg
+                        </span>
+                      </div>
+                      <div className="card-description">
+                        <h1>{name}</h1>
+                        {/* <ul className='moves'>
+                          
+                        </ul> */}
+                      </div>
+                    </div>
+                  ))
+                }
+                </div>
+                <div className="pagination">
+                  <ul>
+                    {
+                      pages.map((e) => (
+                        <li key={e} onClick={() => { setCurPage(e); getPokes((curPage - 1) * 10) }}>{e}</li>
+                      ))
+                    }
+                  </ul>
+                </div>
               </div>
               <div className="card-bottom">
                 <div className="button"></div>
@@ -62,7 +139,7 @@ const Pokedex = () => {
         <div className='pokedex-left'>
           <div className="pokedex-left-main">
             <div className="digital-display">
-              <h1>Hello, Trainer</h1>
+              <h3>Hello Trainer... Today it's {date.toLocaleDateString('es')}</h3>
             </div>
             <div className="keyboard">
               <div className="fila">
@@ -102,3 +179,19 @@ const Pokedex = () => {
 }
 
 export default Pokedex
+
+// export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+//   try {
+//     const offset = Number(query.offset) | 0
+//     const data = await axios.get(
+//       `https://pokeapi.co/api/v2/pokemon?offset=${offset * 10}&limit=10`
+//     )
+//     const list = data.data
+
+//     return {
+//       props: {
+//         list,
+//       }
+//     }
+//   } catch(err) { console.log(err) }
+// }
