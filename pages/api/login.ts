@@ -44,10 +44,13 @@ export default async function loginHandler(
             message: "Incorrect password"
           })
         })
-      } else res.json({
+      } else return res.json({
         status: false,
         message: "Incorrect email"
       })
-    }
+    } else return res.json({
+      status: false,
+      message: 'Method not allowed'
+    })
   } catch (err) { console.log(err) }
 }

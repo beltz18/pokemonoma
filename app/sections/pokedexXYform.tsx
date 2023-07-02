@@ -12,7 +12,6 @@ export default function PokedexXYform () {
   const regexEmail = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/
   const regexPass  = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/
   const notifyError: any   = (msg: string) => toast.error(msg)
-  const notifySuccess: any = (msg: string) => toast.success(msg)
 
   const submitHandler = async (e: any) => {
     e.preventDefault()
@@ -32,10 +31,7 @@ export default function PokedexXYform () {
     else if(email && pass) {
       const response = await axios.post('/api/login', {email, password: pass})
       if (!response.data.status) notifyError(response.data.message)
-      else {
-        setInterval(() => { notifySuccess(response.data.message) }, 1000)
-        Router.push('/loader')
-      }
+      else Router.push('/loader')
     }
   }
 

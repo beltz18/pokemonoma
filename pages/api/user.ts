@@ -8,21 +8,29 @@ export default async function getUser(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  try {
-    const { user }: any = req.cookies
+    if (req.method == 'GET') {
+      const { user }: any = req.cookies
 
-    if(user) {
-      const thisUser: any = verify(user, 'Pokemonoma')
-      
+      if(user) {
+        const thisUser: any = verify(user, 'Pokemonoma')
+        
+        return res.json({
+          data: {
+            status: true,
+            data: {
+              email: thisUser.email,
+              name: thisUser.username
+            }
+          }
+        })
+      }
       return res.json({
-        data: {
-          email: thisUser.email,
-          name: thisUser.username
-        }
+        status: false,
+        message: 'no user found'
       })
     }
     return res.json({
-      message: 'nothing'
+      status: false,
+      message: 'Invalid request'
     })
-  } catch (err) { console.log(err) }
 }
