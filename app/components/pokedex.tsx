@@ -5,7 +5,6 @@ import axios from 'axios'
 const Pokedex = () => {
   const [pokeList, setPokeList] = useState([])
   const [weight, setWeight]     = useState([])
-  const [moves, setMoves]       = useState([])
   const [curPage, setCurPage]   = useState(1)
   const pages = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
   const url = 'https://pokeapi.co/api/v2/'
@@ -16,7 +15,6 @@ const Pokedex = () => {
     const list = data.data.results
     setPokeList(list)
     getWeights(offset)
-    // getMoves(offset)
   }
 
   async function getWeights(id:number = 1) {
@@ -28,20 +26,6 @@ const Pokedex = () => {
     }
     setWeight(arr)
   }
-
-  // not working
-  // async function getMoves(id:number = 1) {
-  //   let arr:any = []
-  //   for(let i = id + 1; i < id + 11; i++ ) {
-  //     let data   = await axios.get(url+`pokemon/${i}`)
-  //     let moves  = data.data.moves
-  //     arr.push([{
-  //       'a': moves[0].move.name,
-  //       'b': moves[1].move.name
-  //     }])
-  //   }
-  //   setMoves(arr)
-  // }
 
   getPokes((curPage - 1) * 10)
 
@@ -80,9 +64,6 @@ const Pokedex = () => {
                       </div>
                       <div className="card-description">
                         <h1>{name}</h1>
-                        {/* <ul className='moves'>
-                          
-                        </ul> */}
                       </div>
                     </div>
                   ))
