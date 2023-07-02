@@ -1,5 +1,6 @@
-import React from 'react'
-import axios from 'axios'
+import React  from 'react'
+import axios  from 'axios'
+import Router from 'next/router'
 import {
   ToastContainer,
   toast
@@ -20,8 +21,8 @@ export default function PokedexXYform () {
 
     if(!email.match(regexEmail)) notifyError(`
       The email cannot:
-      start or finish with a dot, contain spaces into the string or
-      contain special chars (<:, *, etc).
+      start or finish with a dot, contain spaces into
+      the string or contain special chars (<:, *, etc).
     `)
     else if(!pass.match(regexPass)) notifyError(`
       Password must be 8-16 characters with no space
@@ -31,7 +32,10 @@ export default function PokedexXYform () {
     else if(email && pass) {
       const response = await axios.post('/api/login', {email, password: pass})
       if (!response.data.status) notifyError(response.data.message)
-      else notifySuccess(response.data.message)
+      else {
+        setInterval(() => { notifySuccess(response.data.message) }, 1000)
+        Router.push('/loader')
+      }
     }
   }
 
