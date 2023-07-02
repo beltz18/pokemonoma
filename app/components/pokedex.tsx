@@ -120,7 +120,7 @@ const Pokedex = () => {
         <div className='pokedex-left'>
           <div className="pokedex-left-main">
             <div className="digital-display">
-              <h3>Hello Trainer... Today it's {date.toLocaleDateString('es')}</h3>
+              <h3>Hello Trainer... Today it&apos;s {date.toLocaleDateString('es')}</h3>
             </div>
             <div className="keyboard">
               <div className="fila">
