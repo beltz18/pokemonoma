@@ -3,7 +3,7 @@ import PokedexXYform from '@p/pokedexXYform'
 import Router        from 'next/router'
 
 const Login = () => {
-  let url = 'http://localhost:3000/api/user'
+  let url = 'https://pokemonoma.vercel.app/api/user'
 
   const getUser = async () => {
     const response = await (await fetch(url)).json()
