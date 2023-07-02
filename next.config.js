@@ -5,8 +5,19 @@ const withPWA        = require('next-pwa')({
   skipWaiting: true,
   runtimeCaching,
   buildExcludes: [/middleware-manifest.json$/],
-  disable:process.env.NODE_ENV === 'development'
+  disable:process.env.NODE_ENV === 'development',
 })
 
 const nextConfig = withPWA({})
-module.exports = nextConfig
+module.exports = {
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+      },
+    ],
+  },
+  ...nextConfig,
+}
