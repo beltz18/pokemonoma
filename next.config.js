@@ -19,5 +19,14 @@ module.exports = {
       },
     ],
   },
+  // redirects: async () => {
+  //   return [
+  //     {
+  //       source: '/api/login',
+  //       destination: '/dashboard',
+  //       permanent: true
+  //     }
+  //   ]
+  // },
   ...nextConfig,
 }

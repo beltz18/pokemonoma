@@ -25,6 +25,7 @@
       "@p/*": ["./app/sections/*"],
       "@r/*": ["./app/redux/*"],
       "@h/*": ["./app/hooks/*"],
+      "@a/*": ["./app/*"],
     },
     "plugins": [
       {
