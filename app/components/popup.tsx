@@ -5,7 +5,7 @@ import Router from 'next/router'
 const Popup = ({ name }: any) => {
   const [showMenu, setShowMenu] = React.useState(false)
   const [user, setUser]         = React.useState({name: '',email: ''})
-  let url = 'https://pokemonoma.vercel.app/api'
+  let url = 'http://localhost:3000/api'
 
   const logout = async () => {
     await fetch(url+'/logout')
