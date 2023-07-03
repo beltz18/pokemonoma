@@ -1,6 +1,7 @@
 import React  from 'react'
 import axios  from 'axios'
 import Router from 'next/router'
+import Link   from 'next/link'
 import {
   ToastContainer,
   toast
@@ -44,6 +45,7 @@ export default function PokedexXYform () {
           theme="light"
         />
         <div className="login-box">
+          <Link href='/'>Volver a inicio</Link>
           <div className="login-box-top">
             <div className="login-box-top-border"></div>
             <div className="login-box-top-circle-inner"></div>

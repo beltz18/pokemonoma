@@ -1,8 +1,21 @@
-import React from 'react'
-import Image from 'next/image'
+import React  from 'react'
+import Image  from 'next/image'
+import Router from 'next/router'
 
 const Popup = ({ name }: any) => {
   const [showMenu, setShowMenu] = React.useState(false)
+  const [user, setUser]         = React.useState({name: '',email: ''})
+  let url = 'https://pokemonoma.vercel.app/api'
+
+  const logout = async () => {
+    await fetch(url+'/logout')
+    Router.replace('/login')
+  }
+
+  new Promise(async () => {
+    const response = await (await fetch(url+'/user')).json()
+    setUser(response?.data?.data)
+  })
 
   return (
     <>
@@ -18,11 +31,11 @@ const Popup = ({ name }: any) => {
         </div>
         <div className={`menu ${showMenu ? "active" : ""}`}>
           <h3>
-            Username<br />
-            <span>Email</span>
+            { user?.name }<br />
+            <span>{ user?.email }</span>
           </h3>
           <ul>
-            <li><i className='bi bi-power'></i> Logout</li>
+            <li onClick={() => logout() }><i className='bi bi-power'></i> Logout</li>
           </ul>
         </div>
       </div>
