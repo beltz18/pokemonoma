@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@atlaskit/modal-dialog": "^12.6.2",
-    "@atlaskit/popup": "^1.8.0",
     "@types/node": "20.3.2",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",

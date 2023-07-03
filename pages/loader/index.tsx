@@ -3,7 +3,7 @@ import Loader from '@p/loader'
 import Router from 'next/router'
 
 const LoaderPage = () => {
-  setTimeout(() => { Router.push('/dashboard') }, 3800)
+  setTimeout(() => { Router.push('/dashboard') }, 3700)
 
   return (
     <>

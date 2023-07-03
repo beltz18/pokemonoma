@@ -5,5 +5,6 @@
 @import 'sections/dash.min';
 @import 'components/pokedex.min';
 @import 'components/navbar.min';
+@import 'components/popup.min';
 
 .container-main{width:100vw;min-height:100vh;background-color:var(--dark);display:flex;justify-content:center;align-items:center;.light{margin:5rem 0;max-width:90%;background-color:var(--white);border-radius:15px;box-shadow:5px 5px 20px var(--alice);display:flex;justify-content:center;align-items:center;flex-direction:column;padding:20px 50px;.header{display:flex;justify-content:center;align-items:center;flex-direction:column;h1{font-size:45px}img{margin:15px}}.text{margin:20px;article{display:flex;justify-content:center;align-items:center;flex-direction:column;.links{margin-top:20px}p{padding:5px;margin:5px;font-size:18px;text-align:justify;color:var(--dark);a{text-decoration:none;margin:0 5px}.login-link,.pokedex-link{padding:5px 8px;border-radius:3px;color:var(--light)}.login-link{background-color:var(--dark)}.pokedex-link{background-color:var(--red)}}}}}}

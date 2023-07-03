@@ -40,6 +40,11 @@
       "type": "image/png"
     },
     {
+      "src": "assets/lucario.png",
+      "sizes": "600x600",
+      "type": "image/png"
+    },
+    {
       "src": "assets/squirtle.jpg",
       "sizes": "1920x1080",
       "type": "image/jpg"

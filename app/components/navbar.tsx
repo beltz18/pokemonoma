@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link  from 'next/link'
+import Popup from './popup'
 
 const Navbar = () => {
   return (
@@ -18,13 +19,13 @@ const Navbar = () => {
         </div>
         <div className="menu">
           <ul>
-            <li key='about'>
+            <li>
               <Link href='/'>
                 About
               </Link>
             </li>
-            <li key='profile'>
-              Profile
+            <li>
+              <Popup name={"Profile"} />
             </li>
           </ul>
         </div>
