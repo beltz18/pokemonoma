@@ -2,15 +2,14 @@ import React         from 'react'
 import PokedexXYform from '@p/pokedexXYform'
 import Router        from 'next/router'
 
-const Login = () => {
+const getUser = async () => {
   let url = 'https://pokemonoma.vercel.app/api/user'
+  const response = await (await fetch(url)).json()
+  response?.data?.status ? Router.replace('/dashboard') : response
+}
+getUser()
 
-  const getUser = async () => {
-    const response = await (await fetch(url)).json()
-    response?.data?.status ? Router.push('/dashboard') : response
-  }
-  getUser()
-
+const Login = () => {
   return (
     <>
       <PokedexXYform />

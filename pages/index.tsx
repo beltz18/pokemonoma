@@ -7,7 +7,7 @@ export default function Home() {
       <div className="container-main">
         <div className="light">
           <div className="header">
-            <h1>Bienvenido a Pokemonoma!</h1>
+            <h1>Welcome to Pokemonoma!</h1>
             <Image
               src="/assets/pikachu-cute.gif"
               alt="pikachu"
@@ -31,6 +31,10 @@ export default function Home() {
               <p className="links">
                 <Link href="/login" className="login-link">Login</Link>
                 <Link href="/dashboard" className="pokedex-link">Go Pokedex!</Link>
+              </p>
+              <br /><br />
+              <p>
+                <small>Developed by <b><Link href="https://tidv.tech/AndiDev" target="_blank">Andi</Link></b></small>
               </p>
             </article>
           </div>
