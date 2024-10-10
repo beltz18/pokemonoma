@@ -1,6 +1,6 @@
 # Pokemonoma
 
-This is a PWA created as a technical test for Monoma Company
+Pokemonoma is a Pokedex-style project built using Next.js and Sass, focusing on first-generation Pokémon. It is fully responsive and allows users to explore details of these Pokémon. To access the Pokedex, users need to log in with an email and password. The project was developed with attention to detail and is hosted on Vercel.
 
 ## Run the project
 
